@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apache Burr - Open PR Backlog Report</title>
+<title>Apache Burr open PR backlog report</title>
 <style>
   :root { --bg:#0f172a; --card:#1e293b; --ink:#e2e8f0; --muted:#94a3b8; --line:#334155; --accent:#7c3aed; }
   * { box-sizing:border-box; }
@@ -39,7 +39,6 @@
   .pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:600; }
   .draftbadge { display:inline-block; margin-left:6px; padding:0 6px; border-radius:4px; background:#475569; color:#e2e8f0; font-size:10px; text-transform:uppercase; }
   .verdict { display:inline-block; padding:2px 9px; border-radius:6px; font-size:11px; font-weight:700; letter-spacing:.3px; white-space:nowrap; }
-  .minerow { background:#312e8120; }
   .scroll { max-height:620px; overflow:auto; border:1px solid var(--line); border-radius:12px; }
   .scroll table th { position:sticky; top:0; background:var(--card); }
   .note { background:#1e293b; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:12px 16px; color:var(--muted); font-size:13px; margin-top:10px; }
@@ -49,7 +48,7 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>Apache Burr &mdash; Open PR Backlog Report</h1>
+    <h1>Apache Burr open PR backlog report</h1>
     <div class="sub">Repository: <a href="https://github.com/apache/burr">apache/burr</a> &nbsp;&middot;&nbsp; <a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen">61 open pull requests</a> &nbsp;&middot;&nbsp; Source: GitHub REST API &nbsp;&middot;&nbsp; Generated: 2026-11-26 &nbsp;&middot;&nbsp; Rechecked: 2026-11-26</div>
   </header>
 
@@ -58,7 +57,6 @@
     <div class="stat"><div class="n">3</div><div class="l">Drafts</div></div>
     <div class="stat"><div class="n">4</div><div class="l">Older than 6 mo</div></div>
     <div class="stat"><div class="n">1</div><div class="l">Dependency (bot)</div></div>
-    <div class="stat"><div class="n">2</div><div class="l">By @vaquarkhan</div></div>
   </div>
   <div class="note">Checked against the GitHub API on 2026-11-26. Every row below is verified. The complete list of <a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen">61 open pull requests</a> is linked further down this page, and each row links to its pull request.</div>
 
@@ -87,61 +85,9 @@
         <td><a href="https://github.com/apache/burr/pull/1051">#1051</a> by dependabot. No other open bot PR.</td>
       </tr>
       <tr>
-        <td>@vaquarkhan has 2 open PRs, neither merged</td>
-        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-        <td><a href="https://github.com/apache/burr/pull/828">#828</a> (issue <a href="https://github.com/apache/burr/issues/574">#574</a> still open) and <a href="https://github.com/apache/burr/pull/829">#829</a> (issue <a href="https://github.com/apache/burr/issues/391">#391</a> still open). Neither change is on <code>main</code>.</td>
-      </tr>
-      <tr>
-        <td>@vaquarkhan has 5 merged PRs</td>
-        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-        <td><a href="https://github.com/apache/burr/pull/666">#666</a> (2026-04-10), <a href="https://github.com/apache/burr/pull/677">#677</a> (2026-04-21), <a href="https://github.com/apache/burr/pull/763">#763</a> (2026-06-06), <a href="https://github.com/apache/burr/pull/764">#764</a> (2026-06-22), <a href="https://github.com/apache/burr/pull/830">#830</a> (2026-07-18).</td>
-      </tr>
-      <tr>
-        <td>BIP-0042 is merged</td>
-        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-        <td>Cloud-native AWS work landed in <a href="https://github.com/apache/burr/pull/666">#666</a>. The Bedrock piece split out of it landed in <a href="https://github.com/apache/burr/pull/677">#677</a>. Issue <a href="https://github.com/apache/burr/issues/664">#664</a> is closed.</td>
-      </tr>
-      <tr>
-        <td>MCP endpoint PR is @YongGoose's</td>
-        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-        <td><a href="https://github.com/apache/burr/pull/1050">#1050</a> is authored by @YongGoose. @vaquarkhan commented on issue <a href="https://github.com/apache/burr/issues/1036">#1036</a> and has no MCP pull request.</td>
-      </tr>
-      <tr>
-        <td>One open PR in #1038–#1045</td>
+        <td>One open PR in #1038 to #1045</td>
         <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
         <td><a href="https://github.com/apache/burr/pull/1038">#1038</a>, <a href="https://github.com/apache/burr/pull/1039">#1039</a>, and <a href="https://github.com/apache/burr/pull/1041">#1041</a> are merged. <a href="https://github.com/apache/burr/issues/1040">#1040</a> is a closed issue. #1042 does not exist. <a href="https://github.com/apache/burr/issues/1043">#1043</a> and <a href="https://github.com/apache/burr/issues/1044">#1044</a> are issues. The only open pull request in that range is draft <a href="https://github.com/apache/burr/pull/1045">#1045</a>.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>@vaquarkhan merged PRs</h2>
-  <table>
-    <thead><tr><th>PR</th><th>Merged</th><th>What landed</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><a href="https://github.com/apache/burr/pull/666" target="_blank">#666</a></td>
-        <td class="num">2026-04-10</td>
-        <td>BIP-0042 cloud-native AWS: SQS telemetry, buffered S3 persistence, Terraform. Closed issue <a href="https://github.com/apache/burr/issues/664">#664</a>.</td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/apache/burr/pull/677" target="_blank">#677</a></td>
-        <td class="num">2026-04-21</td>
-        <td>Amazon Bedrock integration, split out of #666.</td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/apache/burr/pull/763" target="_blank">#763</a></td>
-        <td class="num">2026-06-06</td>
-        <td>AWS deployment, S3 tracking, and Bedrock docs. Closed issue <a href="https://github.com/apache/burr/issues/724">#724</a>.</td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/apache/burr/pull/764" target="_blank">#764</a></td>
-        <td class="num">2026-06-22</td>
-        <td>Documentation typos and broken examples. Closed issue <a href="https://github.com/apache/burr/issues/725">#725</a>.</td>
-      </tr>
-      <tr>
-        <td><a href="https://github.com/apache/burr/pull/830" target="_blank">#830</a></td>
-        <td class="num">2026-07-18</td>
-        <td>Burr UI dark mode. Closed issue <a href="https://github.com/apache/burr/issues/209">#209</a>.</td>
       </tr>
     </tbody>
   </table>
@@ -243,14 +189,14 @@
           <td>enu-emu</td>
           <td class="num">2026-06-18</td>
           <td class="num">161d</td>
-        </tr><tr class="minerow">
+        </tr><tr>
           <td><a href="https://github.com/apache/burr/pull/828" target="_blank">#828</a></td>
           <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
           <td class="title">fix(tracking): S3 tracking server fails on first start with &#x27;no such table: project&#x27; (#574) </td>
           <td>vaquarkhan</td>
           <td class="num">2026-06-30</td>
           <td class="num">149d</td>
-        </tr><tr class="minerow">
+        </tr><tr>
           <td><a href="https://github.com/apache/burr/pull/829" target="_blank">#829</a></td>
           <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
           <td class="title">docs(deployments): add Burr UI on AWS deployment example (#391) </td>
@@ -626,7 +572,7 @@
   </div>
 
   <footer>
-    Rechecked against the GitHub API on 2026-11-26. The facts table contains only verified statements. Each of the 61 open pull requests links to GitHub. Highlighted rows are authored by @vaquarkhan. Age is whole days from each PR's creation date to 2026-11-26.
+    Rechecked against the GitHub API on 2026-11-26. The facts table contains only verified statements. Each of the 61 open pull requests links to GitHub. Age is whole days from each PR's creation date to 2026-11-26.
   </footer>
 </div>
 </body>
