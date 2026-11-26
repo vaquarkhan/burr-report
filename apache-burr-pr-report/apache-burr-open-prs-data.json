@@ -1,0 +1,429 @@
+﻿[
+    {
+        "number":  602,
+        "title":  "Looking for feedback: adds interceptor lifecycle hook",
+        "created_at":  "2025-11-29T06:18:38Z",
+        "user":  "skrawcz",
+        "draft":  false
+    },
+    {
+        "number":  644,
+        "title":  "Add Claude Code skill for Burr",
+        "created_at":  "2026-01-31T19:02:15Z",
+        "user":  "skrawcz",
+        "draft":  false
+    },
+    {
+        "number":  687,
+        "title":  "feat: add visual builder + workspace mode to Burr UI",
+        "created_at":  "2026-03-23T05:13:05Z",
+        "user":  "andreahlert",
+        "draft":  false
+    },
+    {
+        "number":  786,
+        "title":  "feat: durable execution (suspend/resume + ctx.durable journal)",
+        "created_at":  "2026-05-23T09:47:32Z",
+        "user":  "andreahlert",
+        "draft":  false
+    },
+    {
+        "number":  796,
+        "title":  "feat(core): exception transitions via on_error capture and wildcard routing (#30)",
+        "created_at":  "2026-06-02T16:16:57Z",
+        "user":  "andreahlert",
+        "draft":  false
+    },
+    {
+        "number":  803,
+        "title":  "feat: add LiteLLM AI gateway integration",
+        "created_at":  "2026-06-09T16:59:44Z",
+        "user":  "RheagalFire",
+        "draft":  false
+    },
+    {
+        "number":  810,
+        "title":  "docs: add dedicated Burr UI server documentation (issue #272)",
+        "created_at":  "2026-06-18T00:53:13Z",
+        "user":  "enu-emu",
+        "draft":  false
+    },
+    {
+        "number":  828,
+        "title":  "fix(tracking): S3 tracking server fails on first start with \u0027no such table: project\u0027 (#574)",
+        "created_at":  "2026-06-30T03:30:17Z",
+        "user":  "vaquarkhan",
+        "draft":  false
+    },
+    {
+        "number":  829,
+        "title":  "docs(deployments): add Burr UI on AWS deployment example (#391)",
+        "created_at":  "2026-06-30T03:43:47Z",
+        "user":  "vaquarkhan",
+        "draft":  false
+    },
+    {
+        "number":  836,
+        "title":  "feat: add lower-level parallel streaming support",
+        "created_at":  "2026-07-10T08:38:36Z",
+        "user":  "Haricharanpanjwani",
+        "draft":  false
+    },
+    {
+        "number":  861,
+        "title":  "feat(visualization): add Mermaid graph rendering",
+        "created_at":  "2026-07-27T11:53:31Z",
+        "user":  "FenjuFu",
+        "draft":  false
+    },
+    {
+        "number":  863,
+        "title":  "fix(pydantic): respect class-based action state boundaries",
+        "created_at":  "2026-07-28T06:52:47Z",
+        "user":  "FenjuFu",
+        "draft":  true
+    },
+    {
+        "number":  886,
+        "title":  "feat(examples): add coding agent harness example",
+        "created_at":  "2026-08-16T02:47:56Z",
+        "user":  "Agentic-JJ-Web3",
+        "draft":  false
+    },
+    {
+        "number":  888,
+        "title":  "[Proposal] Small POC for doctest and recipes to prevent docs drift from code",
+        "created_at":  "2026-08-17T15:13:00Z",
+        "user":  "jernejfrank",
+        "draft":  true
+    },
+    {
+        "number":  889,
+        "title":  "Make streaming failures fail closed by default",
+        "created_at":  "2026-08-18T03:44:34Z",
+        "user":  "Eilen6316",
+        "draft":  false
+    },
+    {
+        "number":  896,
+        "title":  "Add OrcaRouter agent example",
+        "created_at":  "2026-08-19T15:35:51Z",
+        "user":  "JinhaoSong322",
+        "draft":  false
+    },
+    {
+        "number":  897,
+        "title":  "fix: report execute hook failures",
+        "created_at":  "2026-08-20T08:47:08Z",
+        "user":  "Eilen6316",
+        "draft":  false
+    },
+    {
+        "number":  903,
+        "title":  "Add agent-supervisor example",
+        "created_at":  "2026-08-29T14:33:31Z",
+        "user":  "shahryarkhalid-cmd",
+        "draft":  false
+    },
+    {
+        "number":  906,
+        "title":  "fix(core): reject transitions after defaults",
+        "created_at":  "2026-08-30T06:05:17Z",
+        "user":  "Eilen6316",
+        "draft":  false
+    },
+    {
+        "number":  908,
+        "title":  "fix(core): consume iterate inputs once",
+        "created_at":  "2026-08-30T12:00:03Z",
+        "user":  "Eilen6316",
+        "draft":  false
+    },
+    {
+        "number":  931,
+        "title":  "feat(core): add artifact/blob store for large state values",
+        "created_at":  "2026-09-12T12:22:33Z",
+        "user":  "vignesh-manel",
+        "draft":  false
+    },
+    {
+        "number":  932,
+        "title":  "Add Google Sheets state persister",
+        "created_at":  "2026-09-12T14:21:14Z",
+        "user":  "prvn0x",
+        "draft":  false
+    },
+    {
+        "number":  943,
+        "title":  "Add get_prior_action to Application",
+        "created_at":  "2026-10-04T18:03:01Z",
+        "user":  "CanReader",
+        "draft":  false
+    },
+    {
+        "number":  945,
+        "title":  "fix(serde): resolve persisted parquet paths relative to the configured directory",
+        "created_at":  "2026-10-04T20:29:51Z",
+        "user":  "elijahbenizzy",
+        "draft":  false
+    },
+    {
+        "number":  946,
+        "title":  "fix(tracking): validate app ids in the local tracking client",
+        "created_at":  "2026-10-04T20:30:21Z",
+        "user":  "elijahbenizzy",
+        "draft":  false
+    },
+    {
+        "number":  947,
+        "title":  "fix(core): bound arithmetic and sequence sizes in safe_expr",
+        "created_at":  "2026-10-04T20:31:05Z",
+        "user":  "elijahbenizzy",
+        "draft":  false
+    },
+    {
+        "number":  948,
+        "title":  "fix(tracking): validate identifiers and keep server paths inside the storage directory",
+        "created_at":  "2026-10-04T20:38:08Z",
+        "user":  "elijahbenizzy",
+        "draft":  false
+    },
+    {
+        "number":  950,
+        "title":  "fix: end each psycopg2 persister call\u0027s transaction",
+        "created_at":  "2026-10-05T16:31:11Z",
+        "user":  "sangkyoonnam",
+        "draft":  false
+    },
+    {
+        "number":  965,
+        "title":  "fix(cli): handle spaces in the Python path when starting the server",
+        "created_at":  "2026-10-15T17:56:13Z",
+        "user":  "enekoreto",
+        "draft":  false
+    },
+    {
+        "number":  976,
+        "title":  "docs: refresh roadmap to reflect shipped, in-review, and planned work",
+        "created_at":  "2026-10-17T15:34:17Z",
+        "user":  "elijahbenizzy",
+        "draft":  false
+    },
+    {
+        "number":  978,
+        "title":  "docs: fix parallelism examples so they run as written",
+        "created_at":  "2026-10-18T10:56:11Z",
+        "user":  "enekoreto",
+        "draft":  false
+    },
+    {
+        "number":  980,
+        "title":  "fix(core): process inputs before astep lifecycle hooks",
+        "created_at":  "2026-10-18T12:43:07Z",
+        "user":  "sivakumar-mahalingam",
+        "draft":  false
+    },
+    {
+        "number":  982,
+        "title":  "fix(notebook): launch UI with current Python interpreter",
+        "created_at":  "2026-10-18T14:04:33Z",
+        "user":  "sivakumar-mahalingam",
+        "draft":  false
+    },
+    {
+        "number":  983,
+        "title":  "fix: normalize default partitions in in-memory persisters",
+        "created_at":  "2026-10-18T16:06:25Z",
+        "user":  "MIRS571",
+        "draft":  false
+    },
+    {
+        "number":  990,
+        "title":  "docs(deployments): add Cloudflare Workers deployment guide",
+        "created_at":  "2026-10-20T10:49:52Z",
+        "user":  "KiritoXDone",
+        "draft":  false
+    },
+    {
+        "number":  995,
+        "title":  "fix(core): process and validate inputs before pre_run_step in astep (#979)",
+        "created_at":  "2026-10-25T06:44:46Z",
+        "user":  "legend91019",
+        "draft":  false
+    },
+    {
+        "number":  996,
+        "title":  "fix(integrations): use current python interpreter in notebook UI launcher (#981)",
+        "created_at":  "2026-10-25T06:51:59Z",
+        "user":  "legend91019",
+        "draft":  false
+    },
+    {
+        "number":  997,
+        "title":  "fix(serde): round-trip tuples and sets in persisted state",
+        "created_at":  "2026-10-26T09:41:04Z",
+        "user":  "RishavTiwari25",
+        "draft":  false
+    },
+    {
+        "number":  1000,
+        "title":  "fix(core): only end a stream that was actually started",
+        "created_at":  "2026-10-27T07:52:09Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1008,
+        "title":  "fix(core): process streaming inputs once",
+        "created_at":  "2026-10-29T07:32:49Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1009,
+        "title":  "docs: fix dead Lightning callbacks and cortex links",
+        "created_at":  "2026-10-30T21:28:28Z",
+        "user":  "sarankumar1325",
+        "draft":  false
+    },
+    {
+        "number":  1012,
+        "title":  "fix(redis): support decoded client responses",
+        "created_at":  "2026-10-31T10:33:52Z",
+        "user":  "MIRS571",
+        "draft":  false
+    },
+    {
+        "number":  1013,
+        "title":  "fix(pydantic): show the real signature in pydantic action validation errors",
+        "created_at":  "2026-10-31T16:25:09Z",
+        "user":  "sarankumar1325",
+        "draft":  false
+    },
+    {
+        "number":  1016,
+        "title":  "fix(core): only end a stream that was actually started",
+        "created_at":  "2026-11-01T06:04:48Z",
+        "user":  "sharpca",
+        "draft":  false
+    },
+    {
+        "number":  1018,
+        "title":  "fix(core): process inputs before pre_run_step in the streaming entry points",
+        "created_at":  "2026-11-01T16:52:51Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1019,
+        "title":  "fix(core): process inputs before pre_run_step in stream_result and astream_result (#1017)",
+        "created_at":  "2026-11-01T18:48:42Z",
+        "user":  "mohitdixit02",
+        "draft":  false
+    },
+    {
+        "number":  1021,
+        "title":  "fix(core): start at the default entrypoint when resume_at_next_action is False",
+        "created_at":  "2026-11-01T19:48:29Z",
+        "user":  "enekoreto",
+        "draft":  false
+    },
+    {
+        "number":  1024,
+        "title":  "ui: migrate to @tanstack/react-query v5 and @xyflow/react v12",
+        "created_at":  "2026-11-03T01:09:15Z",
+        "user":  "andreahlert",
+        "draft":  false
+    },
+    {
+        "number":  1025,
+        "title":  "feat(server): opt-in workspace routes for browsing and running scripts",
+        "created_at":  "2026-11-03T01:09:18Z",
+        "user":  "andreahlert",
+        "draft":  false
+    },
+    {
+        "number":  1026,
+        "title":  "fix(core): remap injected __context/__tracer for single-step actions",
+        "created_at":  "2026-11-03T05:55:06Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1029,
+        "title":  "fix: remove the remaining invalid escape sequence warnings",
+        "created_at":  "2026-11-04T19:20:26Z",
+        "user":  "enekoreto",
+        "draft":  false
+    },
+    {
+        "number":  1031,
+        "title":  "fix: state.wipe() with no arguments raises TypeError instead of",
+        "created_at":  "2026-11-06T06:54:48Z",
+        "user":  "alibb007",
+        "draft":  false
+    },
+    {
+        "number":  1032,
+        "title":  "fix(core): retry cancelled asynchronous actions after resume",
+        "created_at":  "2026-11-06T16:52:35Z",
+        "user":  "linhongyu510",
+        "draft":  false
+    },
+    {
+        "number":  1033,
+        "title":  "fix(core): report a streaming step\u0027s own error, not the caller\u0027s or a hook\u0027s",
+        "created_at":  "2026-11-07T14:16:52Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1037,
+        "title":  "chore(release): address 0.43.0 artifact and validation findings",
+        "created_at":  "2026-11-09T16:54:21Z",
+        "user":  "jernejfrank",
+        "draft":  false
+    },
+    {
+        "number":  1045,
+        "title":  "feat(core): aggregate artifact store and async serde integration",
+        "created_at":  "2026-11-17T02:56:52Z",
+        "user":  "xihaian251",
+        "draft":  true
+    },
+    {
+        "number":  1046,
+        "title":  "fix(tracking): isolate local tracking state by partition key",
+        "created_at":  "2026-11-17T14:49:15Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1047,
+        "title":  "fix(tracking-ui): preserve partition identity across HTTP and React",
+        "created_at":  "2026-11-18T07:07:09Z",
+        "user":  "xihaian251",
+        "draft":  false
+    },
+    {
+        "number":  1050,
+        "title":  "feat(tracking): serve an MCP endpoint from the Burr UI server",
+        "created_at":  "2026-11-22T02:17:49Z",
+        "user":  "YongGoose",
+        "draft":  false
+    },
+    {
+        "number":  1051,
+        "title":  "ci(deps): bump minimatch, sucrase, @typescript-eslint/eslint-plugin and @typescript-eslint/parser in /telemetry/ui",
+        "created_at":  "2026-11-22T22:29:44Z",
+        "user":  "dependabot[bot]",
+        "draft":  false
+    },
+    {
+        "number":  1052,
+        "title":  "docs: record provenance of video thumbnails and TaskHuman logo",
+        "created_at":  "2026-11-22T23:24:14Z",
+        "user":  "skrawcz",
+        "draft":  false
+    }
+]

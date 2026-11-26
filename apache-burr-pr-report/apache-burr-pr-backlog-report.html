@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apache Burr - Open PR Backlog Report</title>
+<style>
+  :root { --bg:#0f172a; --card:#1e293b; --ink:#e2e8f0; --muted:#94a3b8; --line:#334155; --accent:#7c3aed; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1080px; margin:0 auto; padding:32px 20px 64px; }
+  header { border-bottom:1px solid var(--line); padding-bottom:20px; margin-bottom:28px; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  h2 { font-size:18px; margin:36px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  .sub { color:var(--muted); font-size:13px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:8px 0 4px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .stat .n { font-size:30px; font-weight:700; letter-spacing:-.5px; }
+  .stat .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.5px; margin-top:2px; }
+  .stat.hot .n { color:#f87171; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media(max-width:720px){ .grid2 { grid-template-columns:1fr; } }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; }
+  .barrow { display:flex; align-items:center; gap:10px; margin:9px 0; }
+  .barlabel { width:66px; font-size:13px; color:var(--muted); text-align:right; }
+  .bartrack { flex:1; background:#0f172a; border-radius:6px; height:16px; overflow:hidden; }
+  .barfill { display:block; height:100%; border-radius:6px; }
+  .barval { width:30px; font-size:13px; font-weight:600; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.5px; }
+  td.num { white-space:nowrap; color:var(--muted); }
+  td.title { max-width:460px; }
+  a { color:#60a5fa; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:600; }
+  .draftbadge { display:inline-block; margin-left:6px; padding:0 6px; border-radius:4px; background:#475569; color:#e2e8f0; font-size:10px; text-transform:uppercase; }
+  .verdict { display:inline-block; padding:2px 9px; border-radius:6px; font-size:11px; font-weight:700; letter-spacing:.3px; white-space:nowrap; }
+  .minerow { background:#312e8120; }
+  .scroll { max-height:620px; overflow:auto; border:1px solid var(--line); border-radius:12px; }
+  .scroll table th { position:sticky; top:0; background:var(--card); }
+  .note { background:#1e293b; border-left:3px solid var(--accent); border-radius:0 8px 8px 0; padding:12px 16px; color:var(--muted); font-size:13px; margin-top:10px; }
+  footer { margin-top:40px; color:var(--muted); font-size:12px; border-top:1px solid var(--line); padding-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Apache Burr &mdash; Open PR Backlog Report</h1>
+    <div class="sub">Repository: apache/burr &nbsp;&middot;&nbsp; Source: GitHub REST API &nbsp;&middot;&nbsp; Generated: 2026-11-26</div>
+  </header>
+
+  <div class="cards">
+    <div class="stat hot"><div class="n">61</div><div class="l">Open PRs</div></div>
+    <div class="stat"><div class="n">3</div><div class="l">Drafts</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">Older than 6 mo</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">Dependency (bot)</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">By @vaquarkhan</div></div>
+  </div>
+  <div class="note">Headline claim of "over 60 open PRs" is <b>accurate</b>: there are exactly 61 open pull requests. The remaining email claims need correction before sending (see the validation table below).</div>
+
+  <h2>Claim validation</h2>
+  <table>
+    <thead><tr><th>Claim in the email</th><th>Verdict</th><th>Evidence</th></tr></thead>
+    <tbody><tr>
+          <td>Over 60 open PRs</td>
+          <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+          <td>Exactly 61 open PRs at the time of this report.</td>
+        </tr><tr>
+          <td>Recent PRs #1038 to #1045 awaiting review</td>
+          <td><span class="verdict" style="background:#dc26261a;color:#dc2626;border:1px solid #dc262666">INACCURATE</span></td>
+          <td>#1038, #1039, #1041 are already MERGED; #1040/#1042/#1043/#1044 are not PRs; only #1045 is open and it is a DRAFT. This range does not represent a review backlog.</td>
+        </tr><tr>
+          <td>Older community + dependency PRs from early/mid 2026</td>
+          <td><span class="verdict" style="background:#d977061a;color:#d97706;border:1px solid #d9770666">PARTLY TRUE</span></td>
+          <td>Understated. The oldest open PR is #602 from 2025-11-29 (~12 months). Only 1 open dependency PR (#1051, dependabot) exists right now.</td>
+        </tr><tr>
+          <td>Your contributions: #828, #829</td>
+          <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+          <td>Both are open and authored by @vaquarkhan.</td>
+        </tr><tr>
+          <td>Your contribution: MCP server integration</td>
+          <td><span class="verdict" style="background:#dc26261a;color:#dc2626;border:1px solid #dc262666">INACCURATE</span></td>
+          <td>The MCP endpoint PR (#1050) is authored by @YongGoose, not @vaquarkhan. Do not claim it.</td>
+        </tr><tr>
+          <td>Your contribution: BIP-0042</td>
+          <td><span class="verdict" style="background:#d977061a;color:#d97706;border:1px solid #d9770666">UNVERIFIED</span></td>
+          <td>Could not be confirmed from the open PR / API data available for this report.</td>
+        </tr></tbody>
+  </table>
+
+  <h2>Breakdown</h2>
+  <div class="grid2">
+    <div class="panel"><b>By type</b><div class="barrow"><span class="barlabel">fix</span>
+        <span class="bartrack"><span class="barfill" style="width:100%;background:#2563eb"></span></span>
+        <span class="barval">32</span></div><div class="barrow"><span class="barlabel">feat</span>
+        <span class="bartrack"><span class="barfill" style="width:34%;background:#7c3aed"></span></span>
+        <span class="barval">11</span></div><div class="barrow"><span class="barlabel">other</span>
+        <span class="bartrack"><span class="barfill" style="width:28%;background:#64748b"></span></span>
+        <span class="barval">9</span></div><div class="barrow"><span class="barlabel">docs</span>
+        <span class="bartrack"><span class="barfill" style="width:21%;background:#0891b2"></span></span>
+        <span class="barval">7</span></div><div class="barrow"><span class="barlabel">chore</span>
+        <span class="bartrack"><span class="barfill" style="width:3%;background:#059669"></span></span>
+        <span class="barval">1</span></div><div class="barrow"><span class="barlabel">ci/deps</span>
+        <span class="bartrack"><span class="barfill" style="width:3%;background:#d97706"></span></span>
+        <span class="barval">1</span></div></div>
+    <div class="panel"><b>By age</b><div class="barrow"><span class="barlabel">&gt;6mo</span>
+        <span class="bartrack"><span class="barfill" style="width:18%;background:#dc2626"></span></span>
+        <span class="barval">4</span></div><div class="barrow"><span class="barlabel">3-6mo</span>
+        <span class="bartrack"><span class="barfill" style="width:59%;background:#ea580c"></span></span>
+        <span class="barval">13</span></div><div class="barrow"><span class="barlabel">1-3mo</span>
+        <span class="bartrack"><span class="barfill" style="width:100%;background:#d97706"></span></span>
+        <span class="barval">22</span></div><div class="barrow"><span class="barlabel">&lt;1mo</span>
+        <span class="bartrack"><span class="barfill" style="width:100%;background:#16a34a"></span></span>
+        <span class="barval">22</span></div></div>
+  </div>
+
+  <h2>Oldest open PRs</h2>
+  <table>
+    <thead><tr><th>PR</th><th>Title</th><th>Author</th><th>Opened</th><th>Age</th></tr></thead>
+    <tbody><tr><td><a href="https://github.com/apache/burr/pull/602" target="_blank">#602</a></td>
+      <td class="title">Looking for feedback: adds interceptor lifecycle hook</td><td>skrawcz</td>
+      <td class="num">2025-11-29</td><td class="num">362d</td></tr><tr><td><a href="https://github.com/apache/burr/pull/644" target="_blank">#644</a></td>
+      <td class="title">Add Claude Code skill for Burr</td><td>skrawcz</td>
+      <td class="num">2026-01-31</td><td class="num">299d</td></tr><tr><td><a href="https://github.com/apache/burr/pull/687" target="_blank">#687</a></td>
+      <td class="title">feat: add visual builder + workspace mode to Burr UI</td><td>andreahlert</td>
+      <td class="num">2026-03-23</td><td class="num">248d</td></tr><tr><td><a href="https://github.com/apache/burr/pull/786" target="_blank">#786</a></td>
+      <td class="title">feat: durable execution (suspend/resume + ctx.durable journal)</td><td>andreahlert</td>
+      <td class="num">2026-05-23</td><td class="num">187d</td></tr><tr><td><a href="https://github.com/apache/burr/pull/796" target="_blank">#796</a></td>
+      <td class="title">feat(core): exception transitions via on_error capture and wildcard routing (#30)</td><td>andreahlert</td>
+      <td class="num">2026-06-02</td><td class="num">177d</td></tr><tr><td><a href="https://github.com/apache/burr/pull/803" target="_blank">#803</a></td>
+      <td class="title">feat: add LiteLLM AI gateway integration</td><td>RheagalFire</td>
+      <td class="num">2026-06-09</td><td class="num">170d</td></tr></tbody>
+  </table>
+
+  <h2>All open PRs (61)</h2>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>PR</th><th>Type</th><th>Title</th><th>Author</th><th>Opened</th><th>Age</th></tr></thead>
+      <tbody><tr>
+          <td><a href="https://github.com/apache/burr/pull/602" target="_blank">#602</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Looking for feedback: adds interceptor lifecycle hook </td>
+          <td>skrawcz</td>
+          <td class="num">2025-11-29</td>
+          <td class="num">362d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/644" target="_blank">#644</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Add Claude Code skill for Burr </td>
+          <td>skrawcz</td>
+          <td class="num">2026-01-31</td>
+          <td class="num">299d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/687" target="_blank">#687</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat: add visual builder + workspace mode to Burr UI </td>
+          <td>andreahlert</td>
+          <td class="num">2026-03-23</td>
+          <td class="num">248d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/786" target="_blank">#786</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat: durable execution (suspend/resume + ctx.durable journal) </td>
+          <td>andreahlert</td>
+          <td class="num">2026-05-23</td>
+          <td class="num">187d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/796" target="_blank">#796</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(core): exception transitions via on_error capture and wildcard routing (#30) </td>
+          <td>andreahlert</td>
+          <td class="num">2026-06-02</td>
+          <td class="num">177d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/803" target="_blank">#803</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat: add LiteLLM AI gateway integration </td>
+          <td>RheagalFire</td>
+          <td class="num">2026-06-09</td>
+          <td class="num">170d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/810" target="_blank">#810</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs: add dedicated Burr UI server documentation (issue #272) </td>
+          <td>enu-emu</td>
+          <td class="num">2026-06-18</td>
+          <td class="num">161d</td>
+        </tr><tr class="minerow">
+          <td><a href="https://github.com/apache/burr/pull/828" target="_blank">#828</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(tracking): S3 tracking server fails on first start with &#x27;no such table: project&#x27; (#574) </td>
+          <td>vaquarkhan</td>
+          <td class="num">2026-06-30</td>
+          <td class="num">149d</td>
+        </tr><tr class="minerow">
+          <td><a href="https://github.com/apache/burr/pull/829" target="_blank">#829</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs(deployments): add Burr UI on AWS deployment example (#391) </td>
+          <td>vaquarkhan</td>
+          <td class="num">2026-06-30</td>
+          <td class="num">149d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/836" target="_blank">#836</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat: add lower-level parallel streaming support </td>
+          <td>Haricharanpanjwani</td>
+          <td class="num">2026-07-10</td>
+          <td class="num">139d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/861" target="_blank">#861</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(visualization): add Mermaid graph rendering </td>
+          <td>FenjuFu</td>
+          <td class="num">2026-07-27</td>
+          <td class="num">122d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/863" target="_blank">#863</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(pydantic): respect class-based action state boundaries <span class="draftbadge">draft</span></td>
+          <td>FenjuFu</td>
+          <td class="num">2026-07-28</td>
+          <td class="num">121d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/886" target="_blank">#886</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(examples): add coding agent harness example </td>
+          <td>Agentic-JJ-Web3</td>
+          <td class="num">2026-08-16</td>
+          <td class="num">102d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/888" target="_blank">#888</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">[Proposal] Small POC for doctest and recipes to prevent docs drift from code <span class="draftbadge">draft</span></td>
+          <td>jernejfrank</td>
+          <td class="num">2026-08-17</td>
+          <td class="num">101d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/889" target="_blank">#889</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Make streaming failures fail closed by default </td>
+          <td>Eilen6316</td>
+          <td class="num">2026-08-18</td>
+          <td class="num">100d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/896" target="_blank">#896</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Add OrcaRouter agent example </td>
+          <td>JinhaoSong322</td>
+          <td class="num">2026-08-19</td>
+          <td class="num">99d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/897" target="_blank">#897</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix: report execute hook failures </td>
+          <td>Eilen6316</td>
+          <td class="num">2026-08-20</td>
+          <td class="num">98d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/903" target="_blank">#903</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Add agent-supervisor example </td>
+          <td>shahryarkhalid-cmd</td>
+          <td class="num">2026-08-29</td>
+          <td class="num">89d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/906" target="_blank">#906</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): reject transitions after defaults </td>
+          <td>Eilen6316</td>
+          <td class="num">2026-08-30</td>
+          <td class="num">88d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/908" target="_blank">#908</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): consume iterate inputs once </td>
+          <td>Eilen6316</td>
+          <td class="num">2026-08-30</td>
+          <td class="num">88d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/931" target="_blank">#931</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(core): add artifact/blob store for large state values </td>
+          <td>vignesh-manel</td>
+          <td class="num">2026-09-12</td>
+          <td class="num">75d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/932" target="_blank">#932</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Add Google Sheets state persister </td>
+          <td>prvn0x</td>
+          <td class="num">2026-09-12</td>
+          <td class="num">75d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/943" target="_blank">#943</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">Add get_prior_action to Application </td>
+          <td>CanReader</td>
+          <td class="num">2026-10-04</td>
+          <td class="num">53d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/945" target="_blank">#945</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(serde): resolve persisted parquet paths relative to the configured directory </td>
+          <td>elijahbenizzy</td>
+          <td class="num">2026-10-04</td>
+          <td class="num">53d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/946" target="_blank">#946</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(tracking): validate app ids in the local tracking client </td>
+          <td>elijahbenizzy</td>
+          <td class="num">2026-10-04</td>
+          <td class="num">53d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/947" target="_blank">#947</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): bound arithmetic and sequence sizes in safe_expr </td>
+          <td>elijahbenizzy</td>
+          <td class="num">2026-10-04</td>
+          <td class="num">53d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/948" target="_blank">#948</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(tracking): validate identifiers and keep server paths inside the storage directory </td>
+          <td>elijahbenizzy</td>
+          <td class="num">2026-10-04</td>
+          <td class="num">53d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/950" target="_blank">#950</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix: end each psycopg2 persister call&#x27;s transaction </td>
+          <td>sangkyoonnam</td>
+          <td class="num">2026-10-05</td>
+          <td class="num">52d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/965" target="_blank">#965</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(cli): handle spaces in the Python path when starting the server </td>
+          <td>enekoreto</td>
+          <td class="num">2026-10-15</td>
+          <td class="num">42d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/976" target="_blank">#976</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs: refresh roadmap to reflect shipped, in-review, and planned work </td>
+          <td>elijahbenizzy</td>
+          <td class="num">2026-10-17</td>
+          <td class="num">40d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/978" target="_blank">#978</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs: fix parallelism examples so they run as written </td>
+          <td>enekoreto</td>
+          <td class="num">2026-10-18</td>
+          <td class="num">39d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/980" target="_blank">#980</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): process inputs before astep lifecycle hooks </td>
+          <td>sivakumar-mahalingam</td>
+          <td class="num">2026-10-18</td>
+          <td class="num">39d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/982" target="_blank">#982</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(notebook): launch UI with current Python interpreter </td>
+          <td>sivakumar-mahalingam</td>
+          <td class="num">2026-10-18</td>
+          <td class="num">39d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/983" target="_blank">#983</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix: normalize default partitions in in-memory persisters </td>
+          <td>MIRS571</td>
+          <td class="num">2026-10-18</td>
+          <td class="num">39d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/990" target="_blank">#990</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs(deployments): add Cloudflare Workers deployment guide </td>
+          <td>KiritoXDone</td>
+          <td class="num">2026-10-20</td>
+          <td class="num">37d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/995" target="_blank">#995</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): process and validate inputs before pre_run_step in astep (#979) </td>
+          <td>legend91019</td>
+          <td class="num">2026-10-25</td>
+          <td class="num">32d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/996" target="_blank">#996</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(integrations): use current python interpreter in notebook UI launcher (#981) </td>
+          <td>legend91019</td>
+          <td class="num">2026-10-25</td>
+          <td class="num">32d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/997" target="_blank">#997</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(serde): round-trip tuples and sets in persisted state </td>
+          <td>RishavTiwari25</td>
+          <td class="num">2026-10-26</td>
+          <td class="num">31d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1000" target="_blank">#1000</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): only end a stream that was actually started </td>
+          <td>xihaian251</td>
+          <td class="num">2026-10-27</td>
+          <td class="num">30d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1008" target="_blank">#1008</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): process streaming inputs once </td>
+          <td>xihaian251</td>
+          <td class="num">2026-10-29</td>
+          <td class="num">28d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1009" target="_blank">#1009</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs: fix dead Lightning callbacks and cortex links </td>
+          <td>sarankumar1325</td>
+          <td class="num">2026-10-30</td>
+          <td class="num">27d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1012" target="_blank">#1012</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(redis): support decoded client responses </td>
+          <td>MIRS571</td>
+          <td class="num">2026-10-31</td>
+          <td class="num">26d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1013" target="_blank">#1013</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(pydantic): show the real signature in pydantic action validation errors </td>
+          <td>sarankumar1325</td>
+          <td class="num">2026-10-31</td>
+          <td class="num">26d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1016" target="_blank">#1016</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): only end a stream that was actually started </td>
+          <td>sharpca</td>
+          <td class="num">2026-11-01</td>
+          <td class="num">25d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1018" target="_blank">#1018</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): process inputs before pre_run_step in the streaming entry points </td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-01</td>
+          <td class="num">25d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1019" target="_blank">#1019</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): process inputs before pre_run_step in stream_result and astream_result (#1017) </td>
+          <td>mohitdixit02</td>
+          <td class="num">2026-11-01</td>
+          <td class="num">25d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1021" target="_blank">#1021</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): start at the default entrypoint when resume_at_next_action is False </td>
+          <td>enekoreto</td>
+          <td class="num">2026-11-01</td>
+          <td class="num">25d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1024" target="_blank">#1024</a></td>
+          <td><span class="pill" style="background:#64748b1a;color:#64748b;border:1px solid #64748b55">other</span></td>
+          <td class="title">ui: migrate to @tanstack/react-query v5 and @xyflow/react v12 </td>
+          <td>andreahlert</td>
+          <td class="num">2026-11-03</td>
+          <td class="num">23d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1025" target="_blank">#1025</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(server): opt-in workspace routes for browsing and running scripts </td>
+          <td>andreahlert</td>
+          <td class="num">2026-11-03</td>
+          <td class="num">23d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1026" target="_blank">#1026</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): remap injected __context/__tracer for single-step actions </td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-03</td>
+          <td class="num">23d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1029" target="_blank">#1029</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix: remove the remaining invalid escape sequence warnings </td>
+          <td>enekoreto</td>
+          <td class="num">2026-11-04</td>
+          <td class="num">22d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1031" target="_blank">#1031</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix: state.wipe() with no arguments raises TypeError instead of </td>
+          <td>alibb007</td>
+          <td class="num">2026-11-06</td>
+          <td class="num">20d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1032" target="_blank">#1032</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): retry cancelled asynchronous actions after resume </td>
+          <td>linhongyu510</td>
+          <td class="num">2026-11-06</td>
+          <td class="num">20d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1033" target="_blank">#1033</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(core): report a streaming step&#x27;s own error, not the caller&#x27;s or a hook&#x27;s </td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-07</td>
+          <td class="num">19d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1037" target="_blank">#1037</a></td>
+          <td><span class="pill" style="background:#0596691a;color:#059669;border:1px solid #05966955">chore</span></td>
+          <td class="title">chore(release): address 0.43.0 artifact and validation findings </td>
+          <td>jernejfrank</td>
+          <td class="num">2026-11-09</td>
+          <td class="num">17d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1045" target="_blank">#1045</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(core): aggregate artifact store and async serde integration <span class="draftbadge">draft</span></td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-17</td>
+          <td class="num">9d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1046" target="_blank">#1046</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(tracking): isolate local tracking state by partition key </td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-17</td>
+          <td class="num">9d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1047" target="_blank">#1047</a></td>
+          <td><span class="pill" style="background:#2563eb1a;color:#2563eb;border:1px solid #2563eb55">fix</span></td>
+          <td class="title">fix(tracking-ui): preserve partition identity across HTTP and React </td>
+          <td>xihaian251</td>
+          <td class="num">2026-11-18</td>
+          <td class="num">8d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1050" target="_blank">#1050</a></td>
+          <td><span class="pill" style="background:#7c3aed1a;color:#7c3aed;border:1px solid #7c3aed55">feat</span></td>
+          <td class="title">feat(tracking): serve an MCP endpoint from the Burr UI server </td>
+          <td>YongGoose</td>
+          <td class="num">2026-11-22</td>
+          <td class="num">4d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1051" target="_blank">#1051</a></td>
+          <td><span class="pill" style="background:#d977061a;color:#d97706;border:1px solid #d9770655">ci/deps</span></td>
+          <td class="title">ci(deps): bump minimatch, sucrase, @typescript-eslint/eslint-plugin and @typescript-eslint/parser in /telemetry/ui </td>
+          <td>dependabot[bot]</td>
+          <td class="num">2026-11-22</td>
+          <td class="num">4d</td>
+        </tr><tr>
+          <td><a href="https://github.com/apache/burr/pull/1052" target="_blank">#1052</a></td>
+          <td><span class="pill" style="background:#0891b21a;color:#0891b2;border:1px solid #0891b255">docs</span></td>
+          <td class="title">docs: record provenance of video thumbnails and TaskHuman logo </td>
+          <td>skrawcz</td>
+          <td class="num">2026-11-22</td>
+          <td class="num">4d</td>
+        </tr></tbody>
+    </table>
+  </div>
+
+  <footer>
+    Counts reflect the live state of apache/burr open pull requests when generated. Highlighted rows are authored by @vaquarkhan.
+    Age is measured from each PR's creation date to 2026-11-26. This report validates numbers only; it does not assess PR quality or mergeability.
+  </footer>
+</div>
+</body>
+</html>

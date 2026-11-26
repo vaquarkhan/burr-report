@@ -1,0 +1,37 @@
+To: dev@burr.apache.org
+Subject: [DISCUSS] Helping clear the open PR backlog, and requesting triage access
+
+Hi Apache Burr team,
+
+I took a look at the open pull request queue today. apache/burr currently
+has 61 open PRs. A handful have been waiting a long time: 4 are more than
+six months old, and the oldest (#602) dates back to 2025-11-29. Rough
+breakdown by type: 32 fixes, 11 features, 7 docs, 1 dependency bump
+(dependabot #1051), with 3 of the 61 still in draft.
+
+I have been contributing to Burr (for example #828 on S3 tracking server
+startup, and #829 adding a Burr UI on AWS deployment example), and I would
+like to help keep this queue moving. I am happy to start right away by
+reviewing and testing the oldest unreviewed PRs and leaving initial
+feedback, which needs no special access.
+
+To help more systematically, I would also like to ask the PPMC whether I
+could be granted GitHub triage access on apache/burr via .asf.yaml, so I
+can label and categorize incoming PRs and flag CI or reproduction status
+before committer sign-off. If the preference is for me to demonstrate a
+review track record first, that is completely fine and I will just get
+started on reviews.
+
+I put together a short report of the current open PR state (counts,
+age distribution, and the full list) here:
+
+  https://vaquarkhan.github.io/burr-report/
+
+(Note: I kept this email plain text since the list strips attachments.)
+
+Please let me know how you would like me to help, and whether triage
+access makes sense from the PPMC's side.
+
+Thanks,
+Vaquar Khan
+GitHub: @vaquarkhan
