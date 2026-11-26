@@ -33,6 +33,9 @@
   td.title { max-width:460px; }
   a { color:#60a5fa; text-decoration:none; }
   a:hover { text-decoration:underline; }
+  .stat a { color:inherit; display:block; }
+  .stat a:hover { text-decoration:none; }
+  .stat a:hover .n { text-decoration:underline; }
   .pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:11px; font-weight:600; }
   .draftbadge { display:inline-block; margin-left:6px; padding:0 6px; border-radius:4px; background:#475569; color:#e2e8f0; font-size:10px; text-transform:uppercase; }
   .verdict { display:inline-block; padding:2px 9px; border-radius:6px; font-size:11px; font-weight:700; letter-spacing:.3px; white-space:nowrap; }
@@ -47,46 +50,117 @@
 <div class="wrap">
   <header>
     <h1>Apache Burr &mdash; Open PR Backlog Report</h1>
-    <div class="sub">Repository: apache/burr &nbsp;&middot;&nbsp; Source: GitHub REST API &nbsp;&middot;&nbsp; Generated: 2026-11-26</div>
+    <div class="sub">Repository: <a href="https://github.com/apache/burr">apache/burr</a> &nbsp;&middot;&nbsp; <a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen">61 open pull requests</a> &nbsp;&middot;&nbsp; Source: GitHub REST API &nbsp;&middot;&nbsp; Generated: 2026-11-26 &nbsp;&middot;&nbsp; Rechecked: 2026-11-26</div>
   </header>
 
   <div class="cards">
-    <div class="stat hot"><div class="n">61</div><div class="l">Open PRs</div></div>
+    <div class="stat hot"><a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen" target="_blank"><div class="n">61</div><div class="l">Open PRs</div></a></div>
     <div class="stat"><div class="n">3</div><div class="l">Drafts</div></div>
     <div class="stat"><div class="n">4</div><div class="l">Older than 6 mo</div></div>
     <div class="stat"><div class="n">1</div><div class="l">Dependency (bot)</div></div>
     <div class="stat"><div class="n">2</div><div class="l">By @vaquarkhan</div></div>
   </div>
-  <div class="note">Headline claim of "over 60 open PRs" is <b>accurate</b>: there are exactly 61 open pull requests. The remaining email claims need correction before sending (see the validation table below).</div>
+  <div class="note">Checked against the GitHub API on 2026-11-26. Every row below is verified. The complete list of <a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen">61 open pull requests</a> is linked further down this page, and each row links to its pull request.</div>
 
-  <h2>Claim validation</h2>
+  <h2>Verified facts</h2>
   <table>
-    <thead><tr><th>Claim in the email</th><th>Verdict</th><th>Evidence</th></tr></thead>
-    <tbody><tr>
-          <td>Over 60 open PRs</td>
-          <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-          <td>Exactly 61 open PRs at the time of this report.</td>
-        </tr><tr>
-          <td>Recent PRs #1038 to #1045 awaiting review</td>
-          <td><span class="verdict" style="background:#dc26261a;color:#dc2626;border:1px solid #dc262666">INACCURATE</span></td>
-          <td>#1038, #1039, #1041 are already MERGED; #1040/#1042/#1043/#1044 are not PRs; only #1045 is open and it is a DRAFT. This range does not represent a review backlog.</td>
-        </tr><tr>
-          <td>Older community + dependency PRs from early/mid 2026</td>
-          <td><span class="verdict" style="background:#d977061a;color:#d97706;border:1px solid #d9770666">PARTLY TRUE</span></td>
-          <td>Understated. The oldest open PR is #602 from 2025-11-29 (~12 months). Only 1 open dependency PR (#1051, dependabot) exists right now.</td>
-        </tr><tr>
-          <td>Your contributions: #828, #829</td>
-          <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
-          <td>Both are open and authored by @vaquarkhan.</td>
-        </tr><tr>
-          <td>Your contribution: MCP server integration</td>
-          <td><span class="verdict" style="background:#dc26261a;color:#dc2626;border:1px solid #dc262666">INACCURATE</span></td>
-          <td>The MCP endpoint PR (#1050) is authored by @YongGoose, not @vaquarkhan. Do not claim it.</td>
-        </tr><tr>
-          <td>Your contribution: BIP-0042</td>
-          <td><span class="verdict" style="background:#d977061a;color:#d97706;border:1px solid #d9770666">UNVERIFIED</span></td>
-          <td>Could not be confirmed from the open PR / API data available for this report.</td>
-        </tr></tbody>
+    <thead><tr><th>Fact</th><th>Verdict</th><th>Evidence</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen">61 open pull requests</a></td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td>The open-PR API returned 61 pull requests. Numbers, titles, authors, draft flags, and open dates match this page. Full linked list is in <a href="#open-prs">All open PRs</a>.</td>
+      </tr>
+      <tr>
+        <td>3 drafts</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/863">#863</a>, <a href="https://github.com/apache/burr/pull/888">#888</a>, and <a href="https://github.com/apache/burr/pull/1045">#1045</a>.</td>
+      </tr>
+      <tr>
+        <td>4 open PRs older than 6 months</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td>Oldest is <a href="https://github.com/apache/burr/pull/602">#602</a>, opened 2025-11-29 (362 days). Then <a href="https://github.com/apache/burr/pull/644">#644</a>, <a href="https://github.com/apache/burr/pull/687">#687</a>, and <a href="https://github.com/apache/burr/pull/786">#786</a>.</td>
+      </tr>
+      <tr>
+        <td>1 open dependency PR</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/1051">#1051</a> by dependabot. No other open bot PR.</td>
+      </tr>
+      <tr>
+        <td>@vaquarkhan has 2 open PRs, neither merged</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/828">#828</a> (issue <a href="https://github.com/apache/burr/issues/574">#574</a> still open) and <a href="https://github.com/apache/burr/pull/829">#829</a> (issue <a href="https://github.com/apache/burr/issues/391">#391</a> still open). Neither change is on <code>main</code>.</td>
+      </tr>
+      <tr>
+        <td>@vaquarkhan has 5 merged PRs</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/666">#666</a> (2026-04-10), <a href="https://github.com/apache/burr/pull/677">#677</a> (2026-04-21), <a href="https://github.com/apache/burr/pull/763">#763</a> (2026-06-06), <a href="https://github.com/apache/burr/pull/764">#764</a> (2026-06-22), <a href="https://github.com/apache/burr/pull/830">#830</a> (2026-07-18).</td>
+      </tr>
+      <tr>
+        <td>BIP-0042 is merged</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td>Cloud-native AWS work landed in <a href="https://github.com/apache/burr/pull/666">#666</a>. The Bedrock piece split out of it landed in <a href="https://github.com/apache/burr/pull/677">#677</a>. Issue <a href="https://github.com/apache/burr/issues/664">#664</a> is closed.</td>
+      </tr>
+      <tr>
+        <td>MCP endpoint PR is @YongGoose's</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/1050">#1050</a> is authored by @YongGoose. @vaquarkhan commented on issue <a href="https://github.com/apache/burr/issues/1036">#1036</a> and has no MCP pull request.</td>
+      </tr>
+      <tr>
+        <td>One open PR in #1038–#1045</td>
+        <td><span class="verdict" style="background:#16a34a1a;color:#16a34a;border:1px solid #16a34a66">VERIFIED</span></td>
+        <td><a href="https://github.com/apache/burr/pull/1038">#1038</a>, <a href="https://github.com/apache/burr/pull/1039">#1039</a>, and <a href="https://github.com/apache/burr/pull/1041">#1041</a> are merged. <a href="https://github.com/apache/burr/issues/1040">#1040</a> is a closed issue. #1042 does not exist. <a href="https://github.com/apache/burr/issues/1043">#1043</a> and <a href="https://github.com/apache/burr/issues/1044">#1044</a> are issues. The only open pull request in that range is draft <a href="https://github.com/apache/burr/pull/1045">#1045</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>@vaquarkhan merged PRs</h2>
+  <table>
+    <thead><tr><th>PR</th><th>Merged</th><th>What landed</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/666" target="_blank">#666</a></td>
+        <td class="num">2026-04-10</td>
+        <td>BIP-0042 cloud-native AWS: SQS telemetry, buffered S3 persistence, Terraform. Closed issue <a href="https://github.com/apache/burr/issues/664">#664</a>.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/677" target="_blank">#677</a></td>
+        <td class="num">2026-04-21</td>
+        <td>Amazon Bedrock integration, split out of #666.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/763" target="_blank">#763</a></td>
+        <td class="num">2026-06-06</td>
+        <td>AWS deployment, S3 tracking, and Bedrock docs. Closed issue <a href="https://github.com/apache/burr/issues/724">#724</a>.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/764" target="_blank">#764</a></td>
+        <td class="num">2026-06-22</td>
+        <td>Documentation typos and broken examples. Closed issue <a href="https://github.com/apache/burr/issues/725">#725</a>.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/830" target="_blank">#830</a></td>
+        <td class="num">2026-07-18</td>
+        <td>Burr UI dark mode. Closed issue <a href="https://github.com/apache/burr/issues/209">#209</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>@vaquarkhan PRs — not landed</h2>
+  <table>
+    <thead><tr><th>PR</th><th>Status</th><th>What is true</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/828" target="_blank">#828</a></td>
+        <td><span class="verdict" style="background:#d977061a;color:#d97706;border:1px solid #d9770666">OPEN</span></td>
+        <td>S3 first-start fix for issue <a href="https://github.com/apache/burr/issues/574">#574</a>, which is still open. CI is green, including <code>test-tracking-server-s3</code> on Python 3.10–3.12. @skrawcz reviewed it on 2026-11-01: the schema-on-first-start change is the right fix, but two test comments are blocking and still unanswered (last commit 2026-07-26). Labeled <code>pr/stale</code>. <code>generate_schemas</code> is not in the S3 backend on <code>main</code>.</td>
+      </tr>
+      <tr>
+        <td><a href="https://github.com/apache/burr/pull/829" target="_blank">#829</a></td>
+        <td><span class="verdict" style="background:#dc26261a;color:#dc2626;border:1px solid #dc262666">CI FAILING</span></td>
+        <td>AWS Burr UI example for issue <a href="https://github.com/apache/burr/issues/391">#391</a>, which is still open. No reviews. Tests, docs, and release checks pass. pre-commit fails because Black wants <code>tests/deployment/test_burr_ui_example.py</code> reformatted. <code>examples/deployment/aws/burr-ui</code> is not on <code>main</code> (only <code>lambda</code> and <code>terraform</code>).</td>
+      </tr>
+    </tbody>
   </table>
 
   <h2>Breakdown</h2>
@@ -133,7 +207,7 @@
       <td class="num">2026-06-09</td><td class="num">170d</td></tr></tbody>
   </table>
 
-  <h2>All open PRs (61)</h2>
+  <h2 id="open-prs">All open PRs (61) &middot; <a href="https://github.com/apache/burr/pulls?q=is%3Apr+is%3Aopen" target="_blank">view on GitHub</a></h2>
   <div class="scroll">
     <table>
       <thead><tr><th>PR</th><th>Type</th><th>Title</th><th>Author</th><th>Opened</th><th>Age</th></tr></thead>
@@ -569,8 +643,7 @@
   </div>
 
   <footer>
-    Counts reflect the live state of apache/burr open pull requests when generated. Highlighted rows are authored by @vaquarkhan.
-    Age is measured from each PR's creation date to 2026-11-26. This report validates numbers only; it does not assess PR quality or mergeability.
+    Rechecked against the GitHub API on 2026-11-26. The facts table contains only verified statements. Each of the 61 open pull requests links to GitHub. Highlighted rows are authored by @vaquarkhan. Age is whole days from each PR's creation date to 2026-11-26.
   </footer>
 </div>
 </body>
